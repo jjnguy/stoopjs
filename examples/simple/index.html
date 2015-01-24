@@ -3,6 +3,20 @@
 <head>
 </head>
 <body>
+  <div>
+    <span text="hai"></span>
+    <span text="cool"></span>
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : function(){
+        return 'not hai';
+      },
+      cool: 'dude'
+    };
 
+    stoop.apply(document.body, viewModel);
+  </script>
 </body>
 </html>
