@@ -7,13 +7,27 @@
     <span text="hai"></span>
     <span text="cool"></span>
   </div>
+  <div show="false">
+    This should be hidden
+  </div>
+  <div show="true">
+    This should be shown
+  </div>
+  <div show="truFunc">
+    This should be shown
+  </div>
+  <div show="falFunc">
+    This should be hidden
+  </div>
   <script src="../../lib/stoop.js"></script>
   <script>
     var viewModel = {
       hai : function(){
         return 'not hai';
       },
-      cool: 'dude'
+      cool: 'dude',
+      truFunc : function(){ return 'true'; },
+      falFunc : function(){ return 0; }
     };
 
     stoop.apply(document.body, viewModel);
