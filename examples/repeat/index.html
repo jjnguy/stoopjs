@@ -4,15 +4,14 @@
 </head>
 <body>
   <div>
-    <span text="hai"></span>
-  </div>
-  <div>
-    <input type="text" val="hai" />
+    <ul repeat="hai">
+      <li text="$$"></li>
+    </ul>
   </div>
   <script src="../../lib/stoop.js"></script>
   <script>
     var viewModel = {
-      hai : ''
+      hai : ['one', 'tree', 'ate']
     };
 
     stoop.apply(document.body, viewModel);
