@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <ul repeat="hai">
+      <li text="$$"></li>
+    </ul>
+    <ul repeat="bai"><li text="a"></li></ul>
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : ['one', 'tree', 'ate'],
+      bai : [{a:'a1'},{a:'a2'},{a:'a3'}]
+    };
+    
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>

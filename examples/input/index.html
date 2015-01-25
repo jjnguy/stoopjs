@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <span text="hai"></span>
+  </div>
+  <div>
+    <input type="text" val="hai" />
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : ''
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
