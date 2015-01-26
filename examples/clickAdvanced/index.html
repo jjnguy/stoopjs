@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <button click="func">click this</button> clicked <span text="x"></span> times
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+  function ViewModel(){
+	var self = this;
+		self.x = 0;
+		self.func = function (){
+			self.x++;
+		};
+	}
+    stoop.apply(document.body, new ViewModel());
+  </script>
+</body>
+</html>
