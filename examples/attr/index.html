@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <a href="#" attr-href="hai">Click Me</a>
+  </div>
+  <div>
+    <input attr-style="stuff" value="This color is white" />
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : function(){
+        return 'http://google.com';
+      },
+      stuff : 'color: white; background-color: red;'
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
