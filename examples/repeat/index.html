@@ -8,14 +8,26 @@
       <li text="$$"></li>
     </ul>
     <ul repeat="bai"><li text="a"></li></ul>
+    <ul repeat="nested">
+      <li>
+        <span text="name"></span>
+        <ul repeat="arr">
+          <li text="$$"></li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <script src="../../lib/stoop.js"></script>
   <script>
     var viewModel = {
       hai : ['one', 'tree', 'ate'],
-      bai : [{a:'a1'},{a:'a2'},{a:'a3'}]
+      bai : [{a:'a1'},{a:'a2'},{a:'a3'}],
+      nested : [
+        { arr : ['a', 'b', 'c'], name : 'one' },
+        { arr : ['1', '2', '3'], name : 'two' }
+      ]
     };
-    
+
     stoop.apply(document.body, viewModel);
   </script>
 </body>

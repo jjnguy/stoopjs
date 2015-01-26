@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div show="false" text="hai">
+    This should be hidden
+  </div>
+  <div show="true" text="hai">
+    This should be shown
+  </div>
+  <div show="truFunc" text="hai">
+    This should be shown
+  </div>
+  <div show="falFunc" text="hai">
+    This should be hidden
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : function(){
+        return 'not hai';
+      },
+      cool: 'dude',
+      truFunc : function(){ return 'true'; },
+      falFunc : function(){ return 0; }
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
