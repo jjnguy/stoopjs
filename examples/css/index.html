@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <a href="http://google.com" css="{ winner : 'hai', dude : 'isDude' }">Click Me</a>
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : false,
+      isDude : true
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
