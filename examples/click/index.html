@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <span click="function(){ alert('gogogo'); }">click this inline func</span>
+  </div>
+  <div>
+    <span click="func">click this viewmodel func</span>
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      func : function() { alert('This works too.'); }
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
