@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <span>|||hai</span>
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : function(){
+        return 'not hai';
+      }
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
