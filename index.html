@@ -35,10 +35,47 @@
                 The `text` binding allows you set the text of a node.
             </p>
             <p>
-                <code>var viewModel = { someVal : 'Hi!' }</code>
+                <code>var viewModel = { someVal : 'Hi!' };</code>
                 <code>&lt;span text="someVal"&gt;&lt;/span&gt;</code>
                 Results in the following:
                 <code>&lt;span text="someVal"&gt;Hi!&lt;/span&gt;</code>
+            </p>
+        </li>
+        <li>
+            <label>Inline text</label>
+            <p>
+                An alternative to the `text` binding, you can put text inline like so:
+            </p>
+            <p>
+                <code>var viewModel = { someVal : 'Hi!' };</code>
+                <code>&lt;span&gt;|||someVal&lt;/span&gt;</code>
+                Results in the following:
+                <code>&lt;span&gt;Hi!&lt;/span&gt;</code>
+            </p>
+        </li>
+        <li>
+            <label>show</label>
+            <p>
+                In order to show or hide elements use the `show` binding.
+                If the expression evaluates to a falsy value, the element will be set to display: false, otherwise it will inherit its initial state.
+            </p>
+            <p>
+                <code>var viewModel = { someVal : false };</code>
+                <code>&lt;span show="someVal"&gt;&lt;/span&gt;</code>
+                Results in the following:
+                <code>&lt;span show="someVal" style="display:none;"&gt;Hi!&lt;/span&gt;</code>
+            </p>
+        </li>
+        <li>
+            <label>val</label>
+            <p>
+                `val` will set the value property of an element.
+            </p>
+            <p>
+                <code>var viewModel = { someVal : 'hai' };</code>
+                <code>&lt;input val="someVal" /&gt;</code>
+                Results in the following:
+                <code>&lt;span val="someVal" value="hai"&gt;Hi!&lt;/span&gt;</code>
             </p>
         </li>
     </ul>
