@@ -78,6 +78,45 @@
                 <code>&lt;span val="someVal" value="hai"&gt;Hi!&lt;/span&gt;</code>
             </p>
         </li>
+        <li>
+            <label>repeat</label>
+            <p>
+                You can use `repeat` to data bind to arrays. (The `$$` is a special value used to describe the current view model.)
+            </p>
+            <p>
+                <code>var viewModel = { arr : ['a', 'b', 'c'] };</code>
+                <code>
+                    &lt;div repeat="arr"&gt;
+                    &lt;div text="$$"&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+                Results in the following:
+                <code>todo</code>
+            </p>
+        </li>
+        <li>
+            <label>css</label>
+            <p>
+                The `css` binding is used to add or remove css classes on an element.
+            </p>
+            <p>
+                <code>var viewModel = { isError : false, isImportant : true };</code>
+                <code>&lt;span css="{ error : isError, important : isImportant }"&gt;&lt;/span&gt;</code>
+                Results in the following:
+                <code>&lt;span css="{ error : isError, important : isImportant }" class="important"&gt;&lt;/span&gt;</code>
+            </p>
+        </li>
+        <li>
+            <label>click</label>
+            <p>
+                The `click` binding is used to set a click event handler on an element.
+            </p>
+            <p>
+                <code>&lt;span click="function(){alert('Inline functions!');}"&gt;&lt;/span&gt;</code>
+                <code>&lt;span click="viewModelProperty"&gt;&lt;/span&gt;</code>
+            </p>
+        </li>
     </ul>
 </body>
 </html>
