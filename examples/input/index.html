@@ -8,12 +8,23 @@
   </div>
   <div>
     <input type="text" val="hai" />
+    <input type="text" focus="focus" />
   </div>
   <script src="../../lib/stoop.js"></script>
   <script>
-    var viewModel = {
-      hai : ''
-    };
+    function ViewModel(){
+      var self = this;
+
+      self.hai = '';
+
+      self.focus = function(){
+        if (self.hai == '') return true;
+        if (self.hai.length > 5) return true;
+        return false;
+      };
+    }
+
+    var viewModel = new ViewModel();
 
     stoop.apply(document.body, viewModel);
   </script>
