@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <span text="hai"></span>
+  </div>
+  <div>
+    <input type="text" placeholder="no focus"/>
+    <input type="text" placeholder="focus here" focus="hai" />
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    var viewModel = {
+      hai : true
+    };
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
