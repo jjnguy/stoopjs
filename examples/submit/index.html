@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <form submit="gogo">
+    <span text="hai"></span>
+    <input type="text" placeholder="hihi" focus="true"/>
+    <button type="submit">gogo</button>
+  </form>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+  var viewModel = {
+    gogo : function(){
+      alert("submitted");
+      return false;
+    }
+  };
+
+  stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
