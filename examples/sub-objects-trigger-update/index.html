@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div>
+    <p text="count"></p>
+    <ul repeat="bai"><li text="a"></li></ul>
+  </div>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    function ViewModel(){
+      var self = this;
+      self.bai = [{a:'a'},{a:'b'},{a:'a'}];
+
+      self.count = function(){
+        var count = 0;
+        for(var i = 0; i < self.bai.length; i++){
+          if (self.bai[i].a == 'a'){
+            count++;
+          }
+        }
+        return count;
+      };
+    }
+
+    var viewModel = new ViewModel();
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
