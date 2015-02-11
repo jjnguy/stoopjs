@@ -6,15 +6,26 @@
   <div repeat="items">
     <input type="text" placeholder="focus here" val="arr" />
   </div>
+  <div data-bind="foreach: items">
+    <input type="text" placeholder="focus here" data-bind="value: arr" />
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
   <script src="../../lib/stoop.js"></script>
   <script>
-  function ViewModel(){
+  function ViewModel1(){
 	var self = this;
 	
 	self.items = [ { arr : 'pirate' }, { arr : 'array'} ];
   }
-  var viewModel = new ViewModel();
-  stoop.apply(document.body, viewModel);
+  function ViewModel2(){
+	var self = this;
+	
+	self.items = ko.observableArray([ ko.observable({ arr : 'pirate' }), ko.observable({ arr : 'array'}) ]);
+  }
+  var viewModel1 = new ViewModel1();
+  var viewModel2 = new ViewModel2();
+  stoop.apply(document.body, viewModel1);
+  ko.applyBindings(viewModel2);
   </script>
 </body>
 </html>
