@@ -3,15 +3,24 @@
 <head>
 </head>
 <body>
+  <div text="text"></div>
   <div repeat="items">
     <input type="text" placeholder="focus here" val="arr" />
   </div>
   <script src="../../lib/stoop.js"></script>
   <script>
   function ViewModel(){
-	var self = this;
-	
-	self.items = [ { arr : 'pirate' }, { arr : 'array'} ];
+  	var self = this;
+
+  	self.items = [ { arr : 'pirate' }, { arr : 'array'} ];
+
+    self.text = function(){
+      var result = '';
+      for(var i = 0; i < self.items.length; i++){
+        result += self.items[i].arr;
+      }
+      return result;
+    };
   }
   var viewModel = new ViewModel();
   stoop.apply(document.body, viewModel);
