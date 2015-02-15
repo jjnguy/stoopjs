@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body keypress="body">
+  <textarea keypress="textarea"></textarea>
+  <script src="../../lib/stoop.js"></script>
+  <script>
+    function ViewModel(){
+      var self = this;
+
+      self.textarea = function(){
+        alert('textarea');
+        return false;
+      };
+
+      self.body = function(){
+        alert('body');
+      };
+    }
+
+    var viewModel = new ViewModel();
+
+    stoop.apply(document.body, viewModel);
+  </script>
+</body>
+</html>
